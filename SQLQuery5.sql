@@ -1,0 +1,44 @@
+﻿use Fresher
+go
+
+CREATE table Trainee (
+	TraineeID int not null UNIQUE,
+	Full_Name nvarchar(30) not null,
+	Birth_Date date not null,
+	Gender char(10) not null,
+	ET_IQ float not null,
+	ET_Gmath float not null,
+	ET_English float not null,
+	Training_Class char(10),
+	Evaluation_Notes varchar(max),
+	CONSTRAINT pk_Trainee PRIMARY KEY(TraineeID)
+)
+go
+
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('001', 'Nguyễn Văn Ánh', '1999-10-11', 'Nam', '15', '16', '40', 'Fresher 16', 'Tốt', 'AnhNV')
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('002', 'Nguyễn Ngoc Hà', '1997-07-11', 'Nữ', '12', '15', '22', 'Fresher 17', 'Chăm chỉ', 'HaNN')
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('003', 'Lê Văn Luyện', '1999-12-02', 'Nam', '18', '14', '33', 'Fresher 16', 'Siêng năng', 'LuyenLV')
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('004', 'Trần Quân Sư', '1999-03-11', 'Nam', '08', '13', '44', 'Fresher 17', 'Năng nổ', 'SuTQ')
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('005', 'Lê Thánh Ngọc', '2000-02-23', 'Nữ', '02', '12', '12', 'Fresher 17', 'Siêng năng', 'NgocLT')
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('006', 'Nguyễn Văn Hùng', '1999-09-03', 'Nam', '12', '11', '29', 'Fresher 16', 'Tư duy tốt', 'HungNV')
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('007', 'Nguyễn Hoa', '1999-07-21', 'Nữ', '03', '11', '39', 'Fresher 16', 'Khá được', 'HoaN')
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('008', 'Nguyễn Thị Uyên', '1999-02-12', 'Nữ', '10', '02', '49', 'Fresher 17', 'Hay giúp đỡ bạn', 'UyenNT')
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('009', 'Lê Hồng Lĩnh', '1997-08-20', 'Nữ', '07', '16', '29', 'Fresher 16', 'Học khá', 'LinhLH')
+INSERT INTO Trainee(TraineeID, Full_Name, Birth_Date, Gender, ET_IQ, ET_Gmath, ET_English, Training_Class, Evaluation_Notes, Fsoft_Account)
+VALUES('010', 'Bùi Việt Anh', '1999-09-22', 'Nam', '03', '17', '34', 'Fresher 17', 'Học khá', 'AnhBV')
+go
+
+ALTER TABLE Trainee ADD Fsoft_Account char(20) not null UNIQUE
+go
+
+
+
